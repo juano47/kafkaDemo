@@ -32,12 +32,19 @@ kafka-console-consumer.bat --topic kafkaTest --from-beginning --bootstrap-server
 
 
 ## Test Producer Service API
+you cand find this code in folder: /resources/endpoint-tests
 ```
 POST http://localhost:8080/consumer/api/v1/messages
 Content-Type: application/json
 
 {
-  "message": "test2"
+  "id": 1,
+  "description": "order 1",
+  "date": "2021-03-18",
+  "client": {
+    "clientId": 1,
+    "name": "Jhon"
+  }
 }
 ```
 
